@@ -24,8 +24,8 @@ const props = defineProps({
     type: String
   },
   requiredSign: {
-    default: false,
-    type: Boolean
+    default: '',
+    type: String
   },
   showLabel: Boolean
 })
@@ -49,10 +49,10 @@ const model = computed({
     <label v-if="!showLabel" class="label"
       >{{ props.label }}<span class="text-red-600" v-if="requiredSign">*</span></label
     >
-    <div>
+    <div class="rounded">
       <input
         :type="props.text"
-        class="input w-full dark:text-white"
+        class="input w-full dark:text-white pl-1 rounded-md"
         :placeholder="props.placeholder"
         v-model="model"
         :class="{

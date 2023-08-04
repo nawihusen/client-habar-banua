@@ -35,17 +35,12 @@ const loginHandler = () => {
         @submit.prevent="loginHandler"
         class="flex flex-col justify-center"
       >
-        <InputText
-          label="Username :"
-          type="text"
-          placeholder=" Tolong Masukkan Username Anda"
-          v-model="form.username"
-        />
+        <InputText label="Username :" type="text" placeholder=" Username" v-model="form.username" />
         <InputText
           class="mt-3"
           label="Password :"
           type="password"
-          placeholder=" Tolong Masukkan Password Anda"
+          placeholder=" Password"
           v-model="form.password"
         />
 
