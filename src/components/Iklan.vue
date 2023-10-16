@@ -2,13 +2,10 @@
 import { defineComponent } from 'vue'
 
 defineComponent({
-  name: 'CardComponent'
+  name: 'IklanCardComponent'
 })
 </script>
 
 <template>
-  <div>
-    <span><img src="" alt="" /></span>
-    <h6></h6>
-  </div>
+  <div></div>
 </template>

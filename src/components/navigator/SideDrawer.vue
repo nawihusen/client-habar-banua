@@ -43,22 +43,34 @@ const toOwner = async () => {
             >
           </li>
           <li>
-            <a class="flex items-center justify-start cursor-pointer" @click="toNews">
+            <a
+              class="flex items-center justify-start hover:text-white cursor-pointer"
+              @click="toNews"
+            >
               <span class="material-symbols-outlined pr-2"> breaking_news </span> Habar</a
             >
           </li>
           <li>
-            <a class="flex items-center justify-start cursor-pointer" @click="toShop">
+            <a
+              class="flex items-center justify-start hover:text-white cursor-pointer"
+              @click="toShop"
+            >
               <span class="material-symbols-outlined pr-2"> store </span>Toko</a
             >
           </li>
           <li>
-            <a class="flex items-center justify-start cursor-pointer" @click="toCalendar">
+            <a
+              class="flex items-center justify-start hover:text-white cursor-pointer"
+              @click="toCalendar"
+            >
               <span class="material-symbols-outlined pr-2"> calendar_month </span>Kalender Acara</a
             >
           </li>
           <li>
-            <a class="flex items-center justify-start cursor-pointer" @click="toOwner">
+            <a
+              class="flex items-center justify-start hover:text-white cursor-pointer"
+              @click="toOwner"
+            >
               <span class="material-symbols-outlined pr-2"> supervisor_account </span>Owner</a
             >
           </li>
@@ -71,6 +83,7 @@ const toOwner = async () => {
 <style>
 li {
   padding-bottom: 8px;
+  padding-top: 8px;
 }
 </style>
 

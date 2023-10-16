@@ -20,7 +20,7 @@ const onlogout = async () => {
 <template>
   <div class="flex h-12 px-8 py-1 justify-between items-start bg-red-700 w-full">
     <div class="h-full flex items-center justify-center">
-      <h1>Habar Banua</h1>
+      <h1 class="cursor-pointer">Habar Banua</h1>
     </div>
     <div class="h-full flex items-center justify-center">
       <button

@@ -41,7 +41,6 @@ const loginHandler = async () => {
           class="flex flex-col justify-center h-full w-10/12"
         >
           <InputText
-            cla
             label="Username :"
             type="text"
             placeholder=" Username"
