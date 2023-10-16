@@ -4,14 +4,30 @@ import { defineComponent } from 'vue'
 defineComponent({
   name: 'SideDrawerComponent'
 })
+
+const toProfile = async () => {
+  console.log('print profile')
+}
+
+const toNews = async () => {
+  console.log('print news')
+}
+
+const toShop = async () => {
+  console.log('print shop')
+}
+
+const toCalendar = async () => {
+  console.log('print calendar')
+}
+
+const toOwner = async () => {
+  console.log('print owner')
+}
 </script>
 
 <template>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-  />
-  <div class="side-drawer z-20 overflow-y-auto w-20rem pl-6 pr-6 bg-red-600 h-screen">
+  <div class="side-drawer overflow-y-auto w-20rem pl-6 pr-6 bg-red-600 h-full">
     <nav>
       <div class="w-full h-full flex items-center justify-center">
         <img src="@/assets/images/default.jpg" alt="image" class="rounded-full p-4 w-40 h-40" />
@@ -19,28 +35,31 @@ defineComponent({
       <div>
         <ul class="">
           <li>
-            <a class="flex items-center justify-start"
-              ><span class="material-symbols-outlined pr-2"> person </span> Akun</a
+            <a
+              class="flex items-center justify-start hover:text-white cursor-pointer"
+              @click="toProfile"
+            >
+              <span class="material-symbols-outlined pr-2"> person </span> Akun</a
             >
           </li>
           <li>
-            <a class="flex items-center justify-start">
+            <a class="flex items-center justify-start cursor-pointer" @click="toNews">
               <span class="material-symbols-outlined pr-2"> breaking_news </span> Habar</a
             >
           </li>
           <li>
-            <a class="flex items-center justify-start">
+            <a class="flex items-center justify-start cursor-pointer" @click="toShop">
               <span class="material-symbols-outlined pr-2"> store </span>Toko</a
             >
           </li>
           <li>
-            <a class="flex items-center justify-start"
-              ><span class="material-symbols-outlined pr-2"> calendar_month </span>Kalender Acara</a
+            <a class="flex items-center justify-start cursor-pointer" @click="toCalendar">
+              <span class="material-symbols-outlined pr-2"> calendar_month </span>Kalender Acara</a
             >
           </li>
           <li>
-            <a class="flex items-center justify-start"
-              ><span class="material-symbols-outlined pr-2"> supervisor_account </span>Owner</a
+            <a class="flex items-center justify-start cursor-pointer" @click="toOwner">
+              <span class="material-symbols-outlined pr-2"> supervisor_account </span>Owner</a
             >
           </li>
         </ul>
