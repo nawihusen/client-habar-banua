@@ -25,8 +25,8 @@ const props = defineProps({
   <div>
     <div>
       <img :src="props.imgUrl" class="rounded w-40 h-40" alt="gambar berita" />
-      <p v-text="props.time" class="p-0 text-xs font-semibold text-red-500"></p>
+      <p class="p-0 text-xs font-semibold text-red-500">{{ props.time }}</p>
     </div>
-    <p v-text="props.title"></p>
+    <p>{{ props.title }}</p>
   </div>
 </template>

@@ -1,5 +1,17 @@
 <script setup>
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
+
+// const route = useRoute()
+
+// const links = computed(() => {
+// 	return route.meta?.breadcrumb?.filter((match) => match.name)
+// })
+const router = useRouter()
+
+const toOwner = () => {
+  router.push('/portofolio')
+}
 
 defineComponent({
   name: 'SideDrawerComponent'
@@ -19,10 +31,6 @@ const toShop = async () => {
 
 const toCalendar = async () => {
   console.log('print calendar')
-}
-
-const toOwner = async () => {
-  console.log('print owner')
 }
 </script>
 

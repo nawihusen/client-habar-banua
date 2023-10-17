@@ -1,11 +1,12 @@
 <script setup>
 import { defineComponent } from 'vue'
+import profile from '@/components/portofolio/Head.vue'
 
 defineComponent({
-  name: 'LoginPage'
+  name: 'PortopolioPage'
 })
 </script>
 
 <template>
-  <div></div>
+  <profile />
 </template>
