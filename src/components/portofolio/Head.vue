@@ -8,23 +8,41 @@ defineComponent({
 
 <template>
   <header>
-    <div class="flex flex-row flex-wrap p-8 bg-inherit w-full">
-      <div class="flex lg:w-1/3 px-8 items-center justify-center w-full h-full">
+    <div class="flex flex-row flex-wrap p-4 bg-inherit w-full">
+      <div class="flex lg:w-1/3 px-8 items-center justify-center w-full h-full bg-red-500">
         <img
           src="@/assets/images/profile.jpg"
           alt="Profile Image"
           class="rounded-full w-80 h-80 border-2 border-red-400"
         />
       </div>
-      <div class="lg:w-2/3 bg-inherit grow rounded-lg">
-        <ul class="py-8">
-          <li><span>Name </span>Muhammad Nawi Husen</li>
-          <li><span>Address </span></li>
-          <li><span>Email </span></li>
-          <li><span>Phone </span></li>
-          <li><span>LinkedIn </span></li>
-          <li><span>Github </span></li>
-        </ul>
+      <div class="flex lg:w-1/3 bg-inherit grow rounded-lg bg-blue-500 w-full">
+        <div class="flex flex-row bg-yellow-500 h-full w-full">
+          <div class="flex flex-col justify-between py-8 px-4 bg-green-500">
+            <p><span class="tag">Name</span>:</p>
+            <p><span class="tag">Status</span>:</p>
+            <p><span class="tag">Address</span>:</p>
+            <p><span class="tag">Email</span>:</p>
+            <p><span class="tag">Phone</span>:</p>
+            <p><span class="tag">LinkedIn</span>:</p>
+            <p><span class="tag">Github</span>:</p>
+            <p><span class="tag">CV</span>:</p>
+          </div>
+          <div class="flex flex-col grow justify-between py-8 bg-purple-500">
+            <p>Muhammad Nawi Husen</p>
+            <p>Bekerja di suatu tempat</p>
+            <p>di suatu tempat</p>
+            <p>muhammadf dfdfda</p>
+            <p>dfdfdfdfdfdfdfdfd</p>
+            <p><button class="button">LinkedIn Profile</button></p>
+            <p><button class="button">Github Profile</button></p>
+            <p><button class="button">Resume and 履歴書</button></p>
+          </div>
+        </div>
+      </div>
+      <div class="flex lg:w-1/3 bg-inherit grow rounded-lg bg-orange-500 w-full p-4">
+        <h1>Summary :</h1>
+        <div></div>
       </div>
     </div>
   </header>
@@ -34,7 +52,20 @@ defineComponent({
 </template>
 
 <style>
-span {
-  display: block;
+.tag {
+  font-weight: bold;
+}
+
+p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button {
+  border: 1px;
+  background-color: blue;
+  border-radius: 5px;
+  padding: 1px;
 }
 </style>
