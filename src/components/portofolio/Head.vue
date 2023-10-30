@@ -40,15 +40,34 @@ defineComponent({
           </div>
         </div>
       </div>
-      <div class="flex lg:w-1/3 bg-inherit grow rounded-lg bg-orange-500 w-full p-4">
-        <h1>Summary :</h1>
-        <div></div>
+      <div class="flex grow pt-8 pl-4 flex-col lg:w-1/3 bg-inherit rounded-lg bg-blue-500 w-full">
+        <h1>Role :</h1>
+        <ul class="pl-8 list-disc w-full tag">
+          <li>Backend Developer</li>
+          <li>Frontend Developer</li>
+          <li>Android Developer</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col bg-inherit grow rounded-lg bg-orange-500 w-full p-4">
+      <h1 class="bg-red-500 pb-2 font-bold">About Me :</h1>
+      <div>
+        <p>
+          I'm a Backend engineer, graduated from Alterra Academy Immersive Program. I have extensive
+          skill in Golang, gRPC and MySQL. I am also experienced in implementing clean architecture
+          and payment gateway (Using Midtrans) in several projects. I'm very excited about new
+          things I encounter when improving my skills and develop many features, this thing makes me
+          excited to keep growing. Always looking for new challenges and opportunities to learn and
+          grow as a developer. I'm a Backend engineer, graduated from Alterra Academy Immersive
+          Program. I have extensive skill in Golang, gRPC and MySQL. I am also experienced in
+          implementing clean architecture and payment gateway (Using Midtrans) in several projects.
+          I'm very excited about new things I encounter when improving my skills and develop many
+          features, this thing makes me excited to keep growing. Always looking for new challenges
+          and opportunities to learn and grow as a developer.
+        </p>
       </div>
     </div>
   </header>
-  <p class="sm:bg-black md:bg-red-500 lg:bg-blue-500 xl:bg-orange-600">
-    apa sih yang di maksud breaj
-  </p>
 </template>
 
 <style>
