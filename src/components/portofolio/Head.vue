@@ -23,7 +23,7 @@ defineComponent({
             <p><span class="tag">Status</span>:</p>
             <p><span class="tag">Address</span>:</p>
             <p><span class="tag">Email</span>:</p>
-            <p><span class="tag">Phone</span>:</p>
+            <p><span class="tag">Phone/Wa</span>:</p>
             <p><span class="tag">LinkedIn</span>:</p>
             <p><span class="tag">Github</span>:</p>
             <p><span class="tag">CV</span>:</p>
