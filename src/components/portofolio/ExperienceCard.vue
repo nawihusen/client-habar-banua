@@ -16,6 +16,7 @@ defineComponent({
     <div>
       <ul>
         <li>Isi daari pekerjaan yang di lakukan di sana</li>
+        <li class="">coba dlu apa yang ada</li>
       </ul>
     </div>
   </div>

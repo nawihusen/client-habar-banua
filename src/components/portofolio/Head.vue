@@ -49,7 +49,7 @@ defineComponent({
         </ul>
       </div>
     </div>
-    <div class="flex flex-col bg-inherit grow rounded-lg bg-orange-500 w-full p-4">
+    <div class="flex flex-col bg-inherit grow rounded-lg bg-orange-500 w-full p-8">
       <h1 class="bg-red-500 pb-2 font-bold">About Me :</h1>
       <div>
         <p>
