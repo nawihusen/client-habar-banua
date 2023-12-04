@@ -10,7 +10,6 @@ defineComponent({
 </script>
 
 <template>
-  <ProjectCard class="h-full w-full absolute" />
-  <profile />
-  <Naiyou />
+  <div><ProjectCard /></div>
+  <div><profile /> <Naiyou /></div>
 </template>

@@ -7,10 +7,27 @@ defineComponent({
 </script>
 
 <template>
-  <div class="flex flex-col h-full w-full bg-black z-auto">
-    <div>Nama Project</div>
-    <div>Summary Projecy</div>
+  <div class="flex flex-col h-full w-full fixed bg-black p-32 text-red-500 z-100 overflow-auto">
+    <h1>Nama Project</h1>
+    <br />
+    <p>
+      aku adala adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku aku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjaku adala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskjadala
+      adanaljfjkjfdslkjaoifoiewnrf oicahfiuhdajncjkdsnf heoiufhdnajfnadskj
+    </p>
+    <br />
     <div>Tech stack Project</div>
-    <div class="flex justify-end"><button>Github</button></div>
+    <div class="flex justify-end font-bold"><button>Github</button></div>
   </div>
 </template>
