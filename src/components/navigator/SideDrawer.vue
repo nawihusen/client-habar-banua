@@ -35,7 +35,7 @@ const toCalendar = async () => {
 </script>
 
 <template>
-  <div class="side-drawer overflow-y-auto w-20rem pl-6 pr-6 bg-red-600 h-full">
+  <div class="side-drawer overflow-y-auto w-52 pl-6 pr-6 bg-red-600 h-full">
     <nav>
       <div class="w-full h-full flex items-center justify-center">
         <img src="@/assets/images/default.jpg" alt="image" class="rounded-full p-4 w-40 h-40" />
