@@ -129,18 +129,18 @@ const temps = [
 
 <template>
   <div class="flex flex-row w-full h-full">
-    <div class="hidden md:block">
+    <div class="hidden md:block fixed h-full">
       <sideDrawer />
     </div>
 
-    <div class="bg-orange-400 flex grow flex-col">
-      <div><navbar /></div>
+    <div class="bg-orange-400 flex flex-col pl-52">
+      <div class="fixed w-full pr-52"><navbar /></div>
       <div class="border-black border-8 p-8">
         <div
-          class="flex h-fit w-full sm:bg-red-500 md:bg-orange-500 lg:bg-yellow-500 xl:bg-green-500 2xl:bg-blue-500"
+          class="flex pt-12 h-fit w-full sm:bg-red-500 md:bg-orange-500 lg:bg-yellow-500 xl:bg-green-500 2xl:bg-blue-500"
         >
-          <ul class="flex overflow-auto flex-row flex-wrap gap-3 bg-black w-4/5">
-            <li class="test" v-for="(item, i) in temps" :key="i">
+          <ul class="flex flex-row flex-wrap gap-3 bg-black w-4/5">
+            <li class="test overflow-y-hidden" v-for="(item, i) in temps" :key="i">
               <news :time="item.time" :title="item.title" :imgUrl="item.img" />
             </li>
           </ul>
