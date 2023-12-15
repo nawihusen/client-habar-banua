@@ -155,3 +155,5 @@ const temps = [
   background-color: blue;
 }
 </style>
+
+<!-- vs code bermasalah -->
