@@ -6,7 +6,8 @@ import news from '@/components/News.vue'
 const temps = [
   {
     time: 'senin jalo hala',
-    title: 'Judul 1',
+    title:
+      'aku ingin coba buat judul yang panjang supaya tahu apa yang akan terjadi testing pang lui kyapa',
     img: 'src/assets/images/kazuha.png'
   },
   {
@@ -38,112 +39,112 @@ const temps = [
     time: 'senin jalo hala',
     title: 'Judul 1',
     img: 'src/assets/images/kazuha.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/news.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/default.jpg'
-  },
-  {
-    time: 'senin jalo hala',
-    title: 'Judul 1',
-    img: 'src/assets/images/kazuha.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/news.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/default.jpg'
-  },
-  {
-    time: 'senin jalo hala',
-    title: 'Judul 1',
-    img: 'src/assets/images/kazuha.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/news.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/default.jpg'
-  },
-  {
-    time: 'senin jalo hala',
-    title: 'Judul 1',
-    img: 'src/assets/images/kazuha.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/news.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/default.jpg'
-  },
-  {
-    time: 'senin jalo hala',
-    title: 'Judul 1',
-    img: 'src/assets/images/kazuha.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/news.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/default.jpg'
-  },
-  {
-    time: 'senin jalo hala',
-    title: 'Judul 1',
-    img: 'src/assets/images/kazuha.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/news.png'
-  },
-  {
-    time: 'selasa jalo hala',
-    title: 'Judul 2',
-    img: 'src/assets/images/default.jpg'
   }
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/news.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/default.jpg'
+  // },
+  // {
+  //   time: 'senin jalo hala',
+  //   title: 'Judul 1',
+  //   img: 'src/assets/images/kazuha.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/news.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/default.jpg'
+  // },
+  // {
+  //   time: 'senin jalo hala',
+  //   title: 'Judul 1',
+  //   img: 'src/assets/images/kazuha.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/news.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/default.jpg'
+  // },
+  // {
+  //   time: 'senin jalo hala',
+  //   title: 'Judul 1',
+  //   img: 'src/assets/images/kazuha.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/news.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/default.jpg'
+  // },
+  // {
+  //   time: 'senin jalo hala',
+  //   title: 'Judul 1',
+  //   img: 'src/assets/images/kazuha.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/news.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/default.jpg'
+  // },
+  // {
+  //   time: 'senin jalo hala',
+  //   title: 'Judul 1',
+  //   img: 'src/assets/images/kazuha.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/news.png'
+  // },
+  // {
+  //   time: 'selasa jalo hala',
+  //   title: 'Judul 2',
+  //   img: 'src/assets/images/default.jpg'
+  // }
 ]
 </script>
 
 <template>
   <div class="flex flex-row w-full h-full">
-    <div class="hidden md:block fixed h-full">
+    <div class="max-md:hidden fixed h-full">
       <sideDrawer />
     </div>
 
-    <div class="bg-orange-400 flex flex-col pl-52">
-      <div class="fixed w-full pr-52"><navbar /></div>
-      <div class="border-black border-8 p-8">
-        <div
-          class="flex pt-12 h-fit w-full sm:bg-red-500 md:bg-orange-500 lg:bg-yellow-500 xl:bg-green-500 2xl:bg-blue-500"
-        >
-          <ul class="flex flex-row flex-wrap gap-3 bg-black w-4/5">
-            <li class="test overflow-y-hidden" v-for="(item, i) in temps" :key="i">
-              <news :time="item.time" :title="item.title" :imgUrl="item.img" />
-            </li>
-          </ul>
+    <div class="bg-orange-400 flex flex-col md:pl-52 grow">
+      <div class="fixed w-full md:pr-52 max-md:hidden"><navbar /></div>
+      <div class="flex h-full w-full bg-green-600 fixed top-12 pr-52 pb-12">
+        <div class="w-full h-full border-4 border-blue-600 p-8">
+          <div class="h-full w-3/5 overflow-auto bg-red-500">
+            <ul class="grid grid-cols-3 gap-3">
+              <li class="test flex items-center justify-center" v-for="(item, i) in temps" :key="i">
+                <news :time="item.time" :title="item.title" :imgUrl="item.img" />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
