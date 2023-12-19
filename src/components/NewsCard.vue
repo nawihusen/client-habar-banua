@@ -7,7 +7,9 @@ defineComponent({
 
 function shorter(data) {
   if (data.length > 60) {
-    return data.substring(0, 51) + '. . .'
+    return data.substring(0, 45) + '. . .'
+  } else if (data.length <= 60) {
+    return data
   }
 }
 
@@ -28,10 +30,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <div>
+  <div class="h-44 w-44 p-2">
     <div class="flex flex-col justify-center">
       <div class="flex h-full w-full items-center justify-center">
-        <img :src="props.imgUrl" class="rounded w-32 h-32" alt="gambar berita" />
+        <img :src="props.imgUrl" class="rounded w-24 h-24" alt="gambar berita" />
       </div>
       <p class="p-0 text-xs font-semibold text-red-500 justify-end">{{ props.time }}</p>
     </div>

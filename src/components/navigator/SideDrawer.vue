@@ -18,7 +18,7 @@ defineComponent({
 })
 
 const toProfile = async () => {
-  console.log('print profile')
+  router.push('/profile')
 }
 
 const toNews = async () => {
