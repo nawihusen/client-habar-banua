@@ -7,5 +7,5 @@ defineComponent({
 </script>
 
 <template>
-  <div></div>
+  <div><p>newa</p></div>
 </template>
