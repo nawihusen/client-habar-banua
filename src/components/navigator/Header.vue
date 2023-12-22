@@ -1,6 +1,9 @@
 <script setup>
 import { defineComponent } from 'vue'
 import { useAuthStore } from '@/stores/Auth'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 defineComponent({
   name: 'HeaderComponent'
@@ -15,12 +18,16 @@ const onlogout = async () => {
     console.log(error)
   }
 }
+
+const goHome = () => {
+  router.push('/')
+}
 </script>
 
 <template>
   <div class="flex h-12 px-8 py-1 justify-between items-center bg-red-700 w-full">
     <div class="h-full flex items-center justify-center">
-      <h1 class="cursor-pointer">Habar Banua</h1>
+      <h1 class="cursor-pointer" @click="goHome">Habar Banua</h1>
     </div>
     <div class="h-full flex items-center justify-center">
       <button
