@@ -30,3 +30,4 @@ defineComponent({
     <div></div>
   </div>
 </template>
+<!-- gasan di commit -->
