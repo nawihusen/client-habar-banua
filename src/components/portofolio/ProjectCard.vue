@@ -7,6 +7,7 @@ defineComponent({
 </script>
 
 <template>
+  <div class="w-full bg-red-500"><button></button></div>
   <div class="flex flex-col h-full w-full fixed bg-black p-32 text-red-500 z-100 overflow-auto">
     <h1>Nama Project</h1>
     <br />

@@ -1,9 +1,16 @@
 <script setup>
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 defineComponent({
   name: 'ExperienceCardComponent'
 })
+
+const goExperienceListPage = () => {
+  router.push('/experience')
+}
 </script>
 
 <template>
@@ -16,8 +23,11 @@ defineComponent({
     <div>
       <ul>
         <li>Isi daari pekerjaan yang di lakukan di sana</li>
-        <li class="">coba dlu apa yang ada</li>
+        <li>coba dlu apa yang ada</li>
       </ul>
+    </div>
+    <div class="flex justify-end">
+      <button class="font-bold" @click="goExperienceListPage">List Projects</button>
     </div>
   </div>
 </template>
