@@ -10,5 +10,3 @@ defineComponent({
 <template>
   <div><ExperienceCard /></div>
 </template>
-<!-- gasan commit  -->
-<!-- commit  -->
