@@ -79,7 +79,7 @@ const toCalendar = async () => {
               class="flex items-center justify-start hover:text-white cursor-pointer"
               @click="toOwner"
             >
-              <span class="material-symbols-outlined pr-2"> supervisor_account </span>Owner</a
+              <span class="material-symbols-outlined pr-2"> supervisor_account </span>Developer</a
             >
           </li>
         </ul>
