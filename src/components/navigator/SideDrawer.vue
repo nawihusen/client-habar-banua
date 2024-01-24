@@ -22,7 +22,7 @@ const toProfile = async () => {
 }
 
 const toNews = async () => {
-  console.log('print news')
+  router.push('/news')
 }
 
 const toShop = async () => {

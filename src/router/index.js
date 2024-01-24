@@ -5,6 +5,7 @@ import Profile from '../views/ProfilePage.vue'
 import Test from '../views/TestPage.vue'
 import Portofolio from '../views/Portofolio.vue'
 import Experience from '../views/ExperiencePage.vue'
+import News from '../views/NewsPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: '/experience',
       name: 'experience',
       component: Experience
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: News
     },
     {
       // path: '/about',
