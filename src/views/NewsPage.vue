@@ -9,18 +9,16 @@ import sideDrawer from '@/components/navigator/SideDrawer.vue'
   </div>
   <div class="fixed w-full md:pl-52 max-md:hidden"><navbar /></div>
 
-  <div class="pt-12 md:pl-52">
-    <div class="px-12 mt-8 border-b-4 border-black w-full font-bold">
+  <div class="pt-12 md:pl-64 md:pr-28">
+    <div class="pl-2 mt-8 border-b-4 border-black w-full font-bold">
       <input
         placeholder="Search ..."
         type="text"
-        class="input w-full dark:text-white"
+        class="input w-full dark:text-white outline-none"
         :class="{
           'input-error': errorMessage,
           'input-focus': !errorMessage
         }"
-        v-model="model"
-        v-bind="$attrs"
       />
     </div>
   </div>
