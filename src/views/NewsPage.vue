@@ -1,25 +1,28 @@
 <script setup>
 import navbar from '@/components/navigator/Header.vue'
 import sideDrawer from '@/components/navigator/SideDrawer.vue'
+
+const onSearch = () => {
+  console.log('lakukan sesuatu di sini')
+}
 </script>
 
 <template>
   <div class="max-md:hidden fixed h-full">
     <sideDrawer />
   </div>
-  <div class="fixed w-full md:pl-52 max-md:hidden"><navbar /></div>
+  <div class="fixed w-full md:pl-52"><navbar /></div>
 
-  <div class="pt-12 md:pl-64 md:pr-28">
-    <div class="pl-2 mt-8 border-b-4 border-black w-full font-bold">
+  <div class="md:pt-12 md:pl-64 md:pr-28 max-md:pt-16 max-md:px-8">
+    <div class="pl-2 md:mt-8 border-b-4 border-black w-full font-bold flex flex-row gap-3">
       <input
         placeholder="Search ..."
         type="text"
         class="input w-full dark:text-white outline-none"
-        :class="{
-          'input-error': errorMessage,
-          'input-focus': !errorMessage
-        }"
       />
+      <span class="material-symbols-outlined hover:text-blue-500 cursor-pointer" @click="onSearch">
+        search
+      </span>
     </div>
   </div>
 </template>

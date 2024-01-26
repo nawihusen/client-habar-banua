@@ -24,6 +24,7 @@ defineComponent({
             <p><span class="tag">Address</span>:</p>
             <p><span class="tag">Email</span>:</p>
             <p><span class="tag">Phone/Wa</span>:</p>
+            <p><span class="tag">Line</span>:</p>
             <p><span class="tag">LinkedIn</span>:</p>
             <p><span class="tag">Github</span>:</p>
             <p><span class="tag">CV</span>:</p>
@@ -34,6 +35,7 @@ defineComponent({
             <p>di suatu tempat</p>
             <p>muhammadf dfdfda</p>
             <p>dfdfdfdfdfdfdfdfd</p>
+            <p>Line</p>
             <p><button class="button">LinkedIn Profile</button></p>
             <p><button class="button">Github Profile</button></p>
             <p><button class="button">Resume and 履歴書</button></p>
