@@ -1,5 +1,5 @@
 <script setup>
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -10,6 +10,11 @@ defineComponent({
 
 const goExperienceListPage = () => {
   router.push('/experience')
+}
+
+const getRoute = () => {
+  const route = computed(() => router.currentRoute.value.name)
+  return route.value
 }
 </script>
 
@@ -27,7 +32,9 @@ const goExperienceListPage = () => {
       </ul>
     </div>
     <div class="flex justify-end">
-      <button class="font-bold" @click="goExperienceListPage">List Projects</button>
+      <button v-if="getRoute() === 'portofolio'" class="font-bold" @click="goExperienceListPage">
+        More Details
+      </button>
     </div>
   </div>
 </template>
