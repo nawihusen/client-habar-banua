@@ -1,6 +1,7 @@
 <script setup>
 import { computed, defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
+// import { getExperiences } from '../../services/portofolio/portofolio.js'
 
 const router = useRouter()
 
