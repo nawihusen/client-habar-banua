@@ -9,6 +9,25 @@ defineComponent({
   name: 'ExperienceCardComponent'
 })
 
+const props = defineProps({
+  company: {
+    default: 'Nama Perusahaan',
+    type: String
+  },
+  date: {
+    default: '01 January 2023',
+    type: String
+  },
+  role: {
+    default: 'Backend Engineer',
+    type: String
+  },
+  modelValue: {
+    default: '',
+    type: String
+  }
+})
+
 const goExperienceListPage = () => {
   router.push('/experience')
 }
@@ -22,10 +41,10 @@ const getRoute = () => {
 <template>
   <div class="flex flex-col w-full px-8">
     <div class="flex flex-row justify-between font-bold">
-      <h1>Nama Perusahaan</h1>
-      <h1>Tanggal Masuk</h1>
+      <h1>{{ props.company }}</h1>
+      <h1>{{ props.date }}</h1>
     </div>
-    <div class="font-bold">Role</div>
+    <div class="font-bold">{{ props.role }}</div>
     <div>
       <ul>
         <li>Isi daari pekerjaan yang di lakukan di sana</li>
