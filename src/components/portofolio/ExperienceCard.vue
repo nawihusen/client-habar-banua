@@ -22,11 +22,17 @@ const props = defineProps({
     default: 'Backend Engineer',
     type: String
   },
-  modelValue: {
-    default: '',
+  description: {
+    default: 'desc 1. desc 2. desc 3',
     type: String
   }
 })
+
+function splitDetail(data) {
+  const result = data.split('. ')
+
+  return result
+}
 
 const goExperienceListPage = () => {
   router.push('/experience')
@@ -47,8 +53,9 @@ const getRoute = () => {
     <div class="font-bold">{{ props.role }}</div>
     <div>
       <ul>
-        <li>Isi daari pekerjaan yang di lakukan di sana</li>
-        <li>coba dlu apa yang ada</li>
+        <li class="pl-8 py-1" v-for="(item, index) in splitDetail(description)" :key="index">
+          {{ item }}
+        </li>
       </ul>
     </div>
     <div class="flex justify-end">
