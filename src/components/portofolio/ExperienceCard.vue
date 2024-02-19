@@ -1,7 +1,7 @@
 <script setup>
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, ref } from 'vue'
 import { useRouter } from 'vue-router'
-// import { getExperiences } from '../../services/portofolio/portofolio.js'
+import { getExperiences } from '../../services/portofolio/portofolio.js'
 
 const router = useRouter()
 
@@ -9,25 +9,24 @@ defineComponent({
   name: 'ExperienceCardComponent'
 })
 
-const props = defineProps({
-  company: {
-    default: 'Nama Perusahaan',
-    type: String
-  },
-  date: {
-    default: '01 January 2023',
-    type: String
-  },
-  role: {
-    default: 'Backend Engineer',
-    type: String
-  },
-  description: {
-    default: 'desc 1. desc 2. desc 3',
-    type: String
-  }
+const detail = ref({
+  company: '',
+  date: '',
+  role: '',
+  desc: ''
 })
 
+const exps = ref([])
+
+const experiences = async () => {
+  const res = await getExperiences()
+
+  exps.value = res
+}
+console.log(experiences)
+console.log(experiences.value)
+
+console.log(detail)
 function splitDetail(data) {
   const result = data.split('. ')
 
@@ -47,13 +46,13 @@ const getRoute = () => {
 <template>
   <div class="flex flex-col w-full px-8">
     <div class="flex flex-row justify-between font-bold">
-      <h1>{{ props.company }}</h1>
-      <h1>{{ props.date }}</h1>
+      <h1>nama perusahaan</h1>
+      <h1>tanggal masul</h1>
     </div>
-    <div class="font-bold">{{ props.role }}</div>
+    <div class="font-bold">role</div>
     <div>
-      <ul>
-        <li class="pl-8 py-1" v-for="(item, index) in splitDetail(description)" :key="index">
+      <ul v-if="getRoute() === 'experience'">
+        <li class="pl-8 py-1" v-for="(item, index) in splitDetail(experiences[0])" :key="index">
           {{ item }}
         </li>
       </ul>

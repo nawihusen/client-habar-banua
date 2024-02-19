@@ -1,7 +1,6 @@
 <script setup>
 import { defineComponent } from 'vue'
 import ExperienceCard from './ExperienceCard.vue'
-import { getExperiences } from '../../services/portofolio/portofolio.js'
 
 // import ProjectCard from './ProjectCard.vue'
 
@@ -9,7 +8,7 @@ defineComponent({
   name: 'BodyComponent'
 })
 
-console.log(getExperiences())
+// console.log(getExperiences())
 </script>
 
 <template>
