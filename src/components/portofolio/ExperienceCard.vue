@@ -66,6 +66,3 @@ const getRoute = () => {
 </template>
 
 <style></style>
-
-<!-- gasan commi6 -->
-<!-- gasan commit -->
