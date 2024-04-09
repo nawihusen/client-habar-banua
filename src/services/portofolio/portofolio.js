@@ -1,44 +1,22 @@
 // import { get, post, del, patch } from '../http'
-// import { get} from '../http'
+import { get} from '../http'
 
 
-export const getExperiences = async () =>{
-    // const res = await get({
-    //     url:'/experiences'
-    // })
 
-    // return res
-
-    
-const experiences = [
-    {
-      company: 'MNC Group',
-      role: 'Backend Engineer',
-      date: '1 january 2023',
-      desc: 'melakukan berbagai hal seperti hal hal berikut. dan juda ini iut. dlanafjkdbkja'
-    },
-    {
-      company: 'MNC Group',
-      role: 'Backend Engineer',
-      date: '1 january 2023',
-      desc: 'melakukan berbagai hal seperti hal hal berikut'
-    },
-    {
-      company: 'MNC Group',
-      role: 'Backend Engineer',
-      date: '1 january 2023',
-      desc: 'melakukan berbagai hal seperti hal hal berikut'
-    },
-    {
-      company: 'MNC Group',
-      role: 'Backend Engineer',
-      date: '1 january 2023',
-      desc: 'melakukan berbagai hal seperti hal hal berikut'
-    }
-  ]
-
-    return experiences
+export const fetchExperiences = async () =>{
+    const res = await get({
+        url:'/experience'
+    })
+    return res
 }
+
+export const fetchInfo = async () =>{
+  const res = await get({
+    url: '/owner'
+  })
+  return res
+}
+
 
 // export const fetchPartai = async () => {
 // 	const res = await get({

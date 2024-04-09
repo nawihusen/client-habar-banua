@@ -1,17 +1,26 @@
 <script setup>
-import { defineComponent } from 'vue'
+import { defineComponent, ref, watch } from 'vue'
+import { useGetExperience } from '@/components/portofolio/query.js'
 import ExperienceCard from './ExperienceCard.vue'
-
-// import ProjectCard from './ProjectCard.vue'
 
 defineComponent({
   name: 'BodyComponent'
 })
 
-// console.log(getExperiences())
+const experiences = ref([])
+const { data } = useGetExperience()
+
+watch(data, () => {
+  experiences.value = data?.value?.data
+  // console.log(experiences.value)
+})
 </script>
 
 <template>
-  <ExperienceCard class="bg-blue-600 p-4" />
-  <!-- <ProjectCard /> -->
+  <ExperienceCard
+    class="bg-blue-600 p-4 my-2"
+    v-for="experience in experiences"
+    :key="experience.id"
+    :data="experience"
+  />
 </template>

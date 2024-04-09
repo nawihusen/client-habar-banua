@@ -1,6 +1,6 @@
 import axios from 'axios'
 import applyCaseMiddleware from 'axios-case-converter'
-import { useAuthStore } from '@/store/Auth'
+// import { useAuthStore } from '@/stores/Auth'
 // import { useLayout } from '../layout/composables/layout'
 // import router from '@/router'
 // import { Toast } from '@/utils/swal'
@@ -14,29 +14,29 @@ const instance = applyCaseMiddleware(
 	})
 )
 
+// add interceptor
+// instance.interceptors.request.use(
+// 	function (config) {
+// 		const token = localStorage.getItem('access_token')
+// 		const isAuth = () => {
+// 			return !!token
+// 		}
+// 		// Do something before request is sent
+// 		if (isAuth) {
+// 			config.headers['Authorization'] = `Bearer ${token}`
+// 		}
 
-instance.interceptors.request.use(
-	function (config) {
-		const token = localStorage.getItem('access_token')
-		const isAuth = () => {
-			return !!token
-		}
-		// Do something before request is sent
-		if (isAuth) {
-			config.headers['Authorization'] = `Bearer ${token}`
-		}
+// 		const { authentication } = useAuthStore()
+// 		const updatedToken = localStorage.getItem('access_token')
+// 		authentication({ token: updatedToken })
 
-		const { authentication } = useAuthStore()
-		const updatedToken = localStorage.getItem('access_token')
-		authentication({ token: updatedToken })
-
-		return config
-	},
-	function (error) {
-		// Do something with request error
-		return Promise.reject(error)
-	}
-)
+// 		return config
+// 	},
+// 	function (error) {
+// 		// Do something with request error
+// 		return Promise.reject(error)
+// 	}
+// )
 
 // // Add a response interceptor
 // instance.interceptors.response.use(
@@ -90,7 +90,6 @@ const request = (config, options) => {
 export const get = async (config, options) => {
 	return request({ ...config, method: 'GET' }, options)
 }
-
 export const post = async (config, options) =>
 	request({ ...config, method: 'POST' }, options)
 

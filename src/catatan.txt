@@ -1,0 +1,19 @@
+const getRoute = () => {
+  const route = computed(() => router.currentRoute.value.name)
+  return route.value
+} -> mendapatkan route
+
+watch(
+  // Ini adalah fungsi yang digunakan untuk memantau perubahan pada suatu ekspresi.
+  () => route.query, //Ini adalah ekspresi yang dievaluasi untuk memeriksa perubahan pada route.query.
+  // Dengan menempatkan ini di dalam fungsi lambda, Anda memastikan bahwa ekspresi ini dievaluasi setiap
+  // kali ada perubahan pada route.query.
+  () => {
+    queryClient.invalidateQueries('Info')
+  }, //: Ini adalah fungsi callback yang akan dipanggil ketika terjadi perubahan pada route.query
+  {
+    deep: true //Opsi ini menentukan bahwa perubahan yang terjadi pada properti dalam objek yang dipantau juga
+    //harus dipantau secara mendalam (deep). Dalam hal ini, Anda ingin memantau perubahan pada properti
+    //dalam objek route.query.
+  }
+)

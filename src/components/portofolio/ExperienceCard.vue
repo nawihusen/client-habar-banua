@@ -1,70 +1,52 @@
 <script setup>
-import { computed, defineComponent, ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { getExperiences } from '../../services/portofolio/portofolio.js'
-
-const router = useRouter()
+import { defineComponent, ref } from 'vue'
+// import { useRouter } from 'vue-router'
+// import ProjectModal from './ProjectModal.vue'
 
 defineComponent({
   name: 'ExperienceCardComponent'
 })
 
-const detail = ref({
-  company: '',
-  date: '',
-  role: '',
-  desc: ''
+// const router = useRouter()
+const show = ref(false)
+
+const props = defineProps({
+  data: {
+    type: Object,
+    default: () => ({})
+  }
 })
 
-const exps = ref([])
-
-const experiences = async () => {
-  const res = await getExperiences()
-
-  exps.value = res
-}
-console.log(experiences)
-console.log(experiences.value)
-
-console.log(detail)
-function splitDetail(data) {
-  const result = data.split('. ')
-
-  return result
-}
-
-const goExperienceListPage = () => {
-  router.push('/experience')
-}
-
-const getRoute = () => {
-  const route = computed(() => router.currentRoute.value.name)
-  return route.value
+const toggleModal = () => {
+  show.value = !show.value
 }
 </script>
 
 <template>
   <div class="flex flex-col w-full px-8">
     <div class="flex flex-row justify-between font-bold">
-      <h1>nama perusahaan</h1>
-      <h1>tanggal masul</h1>
+      <h1>{{ props.data.company }}</h1>
+      <h1>{{ props.data.start }} - {{ props.data.end }}</h1>
     </div>
-    <div class="font-bold">role</div>
-    <div>
-      <ul v-if="getRoute() === 'experience'">
-        <li class="pl-8 py-1" v-for="(item, index) in splitDetail(experiences[0])" :key="index">
-          {{ item }}
-        </li>
-      </ul>
-    </div>
+    <div class="font-bold">{{ props.data.role }}</div>
+    <!-- <div>{{ props.data.description }}</div> -->
+    <ul>
+      <li
+        v-for="(detail, index) in props.data.description"
+        :key="index"
+        class="list-outside list-disc ml-8"
+      >
+        {{ detail }}
+      </li>
+    </ul>
+    <br />
     <div class="flex justify-end">
-      <button v-if="getRoute() === 'portofolio'" class="font-bold" @click="goExperienceListPage">
-        More Details
+      <button @click="toggleModal" class="text-xs bg-red-500 w-fit py-1 px-2 rounded-md">
+        More Detail
       </button>
     </div>
   </div>
+  <!-- <ProjectModal :toggle:"show"></ProjectModal> -->
 </template>
 
 <style></style>
-<!-- commit  -->
-<!-- commit -->

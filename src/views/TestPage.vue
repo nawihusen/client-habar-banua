@@ -1,17 +1,16 @@
 <script setup>
-// import navbar from '@/components/navigator/Header.vue'
-// import { ref, defineComponent } from 'vue'
+import ProjectModal from '@/components/portofolio/ProjectModal.vue'
+import { ref } from 'vue'
+
+const show = ref(true)
+const closeModal = () => {
+  show.value = !show.value
+}
 </script>
 
 <template>
-  <!-- <navbar /> -->
-  <div class="flex flex-row flex-wrap grow">
-    <div class="min-h-full flex items-center justify-center border-8 border-blue-600">
-      <p>s</p>
-    </div>
-    <div class="flex min-h-full items-center justify-center border-8 border-red-500">
-      <p class="">kampang</p>
-    </div>
+  <div class="h-screen w-screen bg-blue-500 p10">
+    <ProjectModal v-if="show" :toggle="show" @close="closeModal" />
   </div>
 </template>
 

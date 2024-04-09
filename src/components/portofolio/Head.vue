@@ -1,8 +1,16 @@
 <script setup>
-import { defineComponent } from 'vue'
+import { defineComponent, ref, watch } from 'vue'
+import { useFetchInfo } from '@/components/portofolio/query.js'
 
 defineComponent({
   name: 'HeaderComponent'
+})
+
+const info = ref({})
+const { data } = useFetchInfo()
+
+watch(data, () => {
+  info.value = data?.value?.data
 })
 </script>
 
@@ -30,15 +38,21 @@ defineComponent({
             <p><span class="tag">CV</span>:</p>
           </div>
           <div class="flex flex-col grow justify-between py-8 bg-purple-500">
-            <p>Muhammad Nawi Husen</p>
-            <p>Bekerja di suatu tempat</p>
-            <p>di suatu tempat</p>
-            <p>muhammadf dfdfda</p>
-            <p>dfdfdfdfdfdfdfdfd</p>
-            <p>Line</p>
-            <p><button class="button">LinkedIn Profile</button></p>
-            <p><button class="button">Github Profile</button></p>
-            <p><button class="button">Resume and 履歴書</button></p>
+            <p>{{ info?.name }}</p>
+            <p>{{ info?.status }}</p>
+            <p>{{ info?.address }}</p>
+            <p>{{ info?.email }}</p>
+            <p>{{ info?.phone }}</p>
+            <p>{{ info?.line }}</p>
+            <p class="link">
+              <a :href="info?.linkedin" target="_blank">Linked Profile</a>
+            </p>
+            <p class="link">
+              <a :href="info?.github" target="_blank">Github Profile</a>
+            </p>
+            <p class="link">
+              <a :href="info?.cv" target="_blank">Resume and 履歴書</a>
+            </p>
           </div>
         </div>
       </div>
@@ -47,26 +61,14 @@ defineComponent({
         <ul class="pl-8 list-disc w-full tag">
           <li>Backend Developer</li>
           <li>Frontend Developer</li>
-          <li>Android Developer</li>
+          <!-- <li>Android Developer</li> -->
         </ul>
       </div>
     </div>
     <div class="flex flex-col bg-inherit grow rounded-lg bg-orange-500 w-full p-8">
       <h1 class="bg-red-500 pb-2 font-bold">About Me :</h1>
       <div>
-        <p>
-          I'm a Backend engineer, graduated from Alterra Academy Immersive Program. I have extensive
-          skill in Golang, gRPC and MySQL. I am also experienced in implementing clean architecture
-          and payment gateway (Using Midtrans) in several projects. I'm very excited about new
-          things I encounter when improving my skills and develop many features, this thing makes me
-          excited to keep growing. Always looking for new challenges and opportunities to learn and
-          grow as a developer. I'm a Backend engineer, graduated from Alterra Academy Immersive
-          Program. I have extensive skill in Golang, gRPC and MySQL. I am also experienced in
-          implementing clean architecture and payment gateway (Using Midtrans) in several projects.
-          I'm very excited about new things I encounter when improving my skills and develop many
-          features, this thing makes me excited to keep growing. Always looking for new challenges
-          and opportunities to learn and grow as a developer.
-        </p>
+        <p>{{ info?.summary }}</p>
       </div>
     </div>
   </header>
@@ -83,10 +85,7 @@ p {
   justify-content: space-between;
 }
 
-.button {
-  border: 1px;
-  background-color: blue;
-  border-radius: 5px;
-  padding: 1px;
+.link {
+  color: blue;
 }
 </style>
